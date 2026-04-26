@@ -6,7 +6,7 @@ from pinchange import change_pin
 from transfer import transfer
 from Balanceinquiry import balance_enquiry
 while True:
-    print("WELCOME !")
+    print("||___WELCOME___||")
     print("Please insert your card")
     print("Hi,please do not remove your chip card.")
     print("leave your card inserted during the entire transaction")
@@ -24,7 +24,7 @@ while True:
     print("1:Cash Withdrawal")
     print("2:Deposit")
     print("3:Pin change")
-    print("4:Fast cash")
+    print("4:Fast cash")  
     print("5:Transfer")
     print("6:Balance enquiry")
     transaction=int(input("Enter the number corresponding to your transaction: "))

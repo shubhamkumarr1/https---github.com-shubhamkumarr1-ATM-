@@ -7,7 +7,7 @@ def withdrawal():
             pin = input("Please enter your 4-digit pin: ")
         else:
             break 
-    account=str(input("Please select your account type:(saving or current) "))
+    account=(input("Please select your account type:(saving or current) "))
     while True:
         amount=int(input("Please enter the amount you want to withdraw: "))
         if total_amount<amount:
@@ -20,11 +20,12 @@ def withdrawal():
             if str3=="yes":
                 show_balance=total_amount-amount
                 print("total remaing amount:",show_balance)
-                another_withdrawal=str(input("Do you want to perform another transaction? (yes or no): "))
-                if another_withdrawal=="yes":  
-                    continue
-                else:
-                    print("Thank you for using our ATM. Have a nice day!")
+            another_withdrawal=str(input("Do you want to perform another transaction? (yes or no): "))
+            if another_withdrawal=="yes":  
+                continue
             else:
                 print("Thank you for using our ATM. Have a nice day!")
-        break
+                break
+        else:
+            print("Invalid amount, please enter a multiple of 100")
+           
