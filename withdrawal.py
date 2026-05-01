@@ -1,6 +1,7 @@
 from balace_amount import total_amount 
 def withdrawal():
     pin =input("Please enter your pin: ")
+    balance=total_amount
     while True:
         if len(pin) < 4 or len(pin) > 4:
             print("Invalid pin")
@@ -14,12 +15,13 @@ def withdrawal():
             print("Insufficient balanace")
             print("Try again")
         elif amount%100==0:
+
             print("Your transaction is being processess please wait.....")
             print("Please collect your cash")
             str3=str(input("You want check the balance in your account:(yes/no) ")).lower()
             if str3=="yes":
-                show_balance=total_amount-amount
-                print("total remaing amount:",show_balance)
+                balance-=amount
+                print("total remaing amount:",balance)
             another_withdrawal=str(input("Do you want to perform another transaction? (yes or no): "))
             if another_withdrawal=="yes":  
                 continue

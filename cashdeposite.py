@@ -1,8 +1,13 @@
 from balace_amount import total_amount 
 def deposite():
-    pin=int(input("Please enter your pin:"))
+    while True:
+        pin = input("Please enter your 4-digit pin: ")
+        if len(pin) < 4 or len(pin) > 4:
+            print("Invalid pin")
+        else:
+            break 
     account=input("Please select your account type:(saving or current) ")
-    print("DEPOSITE PER TRANSACTION LIMITE:100000")
+    print("Deposite per transaction limite:100000")
     balance=total_amount
     while True: 
         print("Acceptable denomination Rs 100, Rs 200, Rs 500.")

@@ -1,9 +1,17 @@
 def change_pin():
-    account_num=int(input("Enter your accounrt number: "))
-    print("check OTP on your registered phone number.")
-    otp=int(input("please enter 4 digits otp: "))
     while True:
-        current_pin=int(input("Please enter your current pin:"))
+        account_num=input("Enter your account number: ")
+        if len(account_num)==10:
+            print("check OTP on your registered phone number.")
+            otp=input("please enter 4 digits otp: ")
+            if len(otp)==4:
+                break
+            else:
+                print("Enter valid otp.")
+        else:
+            print("Please enter valid account number.")
+    while True:
+        current_pin=input("Please enter your current pin:")
         new_pin=int(input("Please enter your new pin:"))
         confirm_pin=int(input("Please re-enter your new pin:"))
         if new_pin !=confirm_pin:
