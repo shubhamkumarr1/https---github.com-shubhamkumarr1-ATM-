@@ -1,4 +1,4 @@
-def change_pin():
+def change_pin(create_pin):
     while True:
         account_num=input("Enter your account number: ")
         if len(account_num)==10:
@@ -11,14 +11,16 @@ def change_pin():
         else:
             print("Please enter valid account number.")
     while True:
-        current_pin=input("Please enter your current pin:")
-        new_pin=int(input("Please enter your new pin:"))
-        confirm_pin=int(input("Please re-enter your new pin:"))
-        if new_pin !=confirm_pin:
-            print("new_pin and confirm_pin does't match.")
-            print("Please try again.")
-        else: 
-            print('''Processing......
+        
+        pin =int(input("Please enter your pin: "))
+        if pin==create_pin:
+            new_pin=int(input("Please enter your new pin:"))
+            confirm_pin=int(input("Please re-enter your new pin:"))
+            if new_pin !=confirm_pin:
+                print("new_pin and confirm_pin does't match.")
+                print("Please try again.")
+            else: 
+                print('''Processing......
 Pin set successfully
 Take your card''')
-            break
+        break

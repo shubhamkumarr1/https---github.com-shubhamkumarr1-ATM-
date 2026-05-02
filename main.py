@@ -60,7 +60,7 @@ while True:
                         create_pin=change_pin(create_pin) 
                         break
                     elif transaction==4:  
-                        balance=fast_cash(balance)
+                        balance=fast_cash(balance,create_pin)
                         break
                     elif transaction==5:  
                         balance=transfer(balance)

@@ -1,16 +1,18 @@
-def fast_cash():
-    pin=(input("Please enter your pin: "))
+def fast_cash(balance, create_pin):
     while True:
-        if len(pin) < 4 or len(pin) > 4:
-            print("Invalid pin")
-            pin = input("Please enter your 4-digit pin: ")
+        pin = int(input("Please enter your pin: "))
+        
+        if pin == create_pin:
+            amount = int(input("Please enter the amount you can withdraw: "))
+            
+            if amount % 100 != 0:
+                print("Please enter valid amount.")
+                continue
+            
+            print("your transaction is being processed.....")
+            print("Transaction completed.")
+            print("Take your card.")
+            print("Thank you for using our ATM. Have a nice day!")
+            return         
         else:
-            break
-    amount=int(input("Please enter the amount you can withdraw: "))
-    if amount%100!=0:
-        print("Please enter valid amount. ")
-    else:
-        print("your transaction is being processess.....")
-        print("Transaction completed.")
-        print("Take your card.")
-        print("Thank you for using our ATM. Have a nice day!")
+            print("Please enter valid pin")
